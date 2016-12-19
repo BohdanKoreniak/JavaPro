@@ -1,4 +1,4 @@
-package com.bohdan.java.pro.lesson4.task2;
+package com.bohdan.java.pro.lesson2.task2;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

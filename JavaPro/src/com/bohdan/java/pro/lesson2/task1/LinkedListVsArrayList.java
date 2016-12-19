@@ -1,4 +1,4 @@
-package com.bohdan.java.pro.lesson4.task1;
+package com.bohdan.java.pro.lesson2.task1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
