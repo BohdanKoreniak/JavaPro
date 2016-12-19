@@ -1,6 +1,6 @@
-package com.bohdan.java.pro.lesson2;
+package com.bohdan.java.pro.lesson1.task2;
 
-import com.bohdan.java.pro.lesson2.managers.PersonManager;
+import com.bohdan.java.pro.lesson1.task2.managers.PersonManager;
 
 /**
  * Created by Bohdan on 17.12.2016.

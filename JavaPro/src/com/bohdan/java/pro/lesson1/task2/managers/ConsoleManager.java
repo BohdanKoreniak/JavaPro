@@ -1,4 +1,4 @@
-package com.bohdan.java.pro.lesson2.managers;
+package com.bohdan.java.pro.lesson1.task2.managers;
 
 import java.io.BufferedReader;
 import java.io.IOException;

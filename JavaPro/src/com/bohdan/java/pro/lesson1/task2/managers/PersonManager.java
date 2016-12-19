@@ -1,6 +1,6 @@
-package com.bohdan.java.pro.lesson2.managers;
+package com.bohdan.java.pro.lesson1.task2.managers;
 
-import com.bohdan.java.pro.lesson2.Person;
+import com.bohdan.java.pro.lesson1.task2.Person;
 
 import java.io.IOException;
 import java.util.ArrayList;

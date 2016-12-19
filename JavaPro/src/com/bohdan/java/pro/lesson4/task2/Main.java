@@ -1,4 +1,4 @@
-package com.bohdan.java.pro.lesson4;
+package com.bohdan.java.pro.lesson4.task2;
 
 /**
  * Created by Bohdan on 18.12.2016.

@@ -1,4 +1,4 @@
-package com.bohdan.java.pro.lesson2;
+package com.bohdan.java.pro.lesson1.task2;
 
 import java.io.Serializable;
 import java.time.LocalDate;
