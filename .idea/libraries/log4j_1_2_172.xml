@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="log4j-1.2.172">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Soft/log4j-1.2.17/apache-log4j-1.2.17/log4j-1.2.17.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../Soft/log4j-1.2.17/apache-log4j-1.2.17/site/apidocs" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

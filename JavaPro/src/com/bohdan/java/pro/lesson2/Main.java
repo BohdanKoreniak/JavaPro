@@ -1,4 +1,4 @@
-package pro.lesson2;
+package com.bohdan.java.pro.lesson2;
 
 import com.bohdan.java.pro.lesson2.managers.PersonManager;
 

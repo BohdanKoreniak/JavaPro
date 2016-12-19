@@ -1,4 +1,4 @@
-package pro.lesson2;
+package com.bohdan.java.pro.lesson2;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -100,7 +100,22 @@ public class Person implements Serializable, Comparable<Person>
 
         Person person = (Person) obj;
 
+        if (!name.equals(person.name))
+        {
+            return false;
+        }
+
         if (!surname.equals(person.getSurname()))
+        {
+            return false;
+        }
+
+        if (age != person.getAge())
+        {
+            return false;
+        }
+
+        if (!dateBirthday.equals(person.getDateBirthday()))
         {
             return false;
         }
