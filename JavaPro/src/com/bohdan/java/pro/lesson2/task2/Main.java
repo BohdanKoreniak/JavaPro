@@ -28,7 +28,6 @@ public class Main
         treeMap.add(13, "John");
         treeMap.add(16, "John");
         treeMap.add(20, "John");
-        treeMap.add(28, "John");
 
         System.out.println(treeMap.getNodes());
         System.out.println(treeMap.contains("John"));
