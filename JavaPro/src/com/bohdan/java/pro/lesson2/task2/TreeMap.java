@@ -3,6 +3,9 @@ package com.bohdan.java.pro.lesson2.task2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by Bohdan on 18.12.2016.
  */
@@ -13,6 +16,11 @@ public class TreeMap<K extends Comparable<K>, V>
     private Node rootNode;
     private Node leftmostNode;
     private Node rightmostNode;
+
+    public Node getRootNode()
+    {
+        return rootNode;
+    }
 
     public boolean add(K key, V value)
     {
@@ -73,6 +81,20 @@ public class TreeMap<K extends Comparable<K>, V>
         return null;
     }
 
+    public Node getNode(K key)
+    {
+        logger.debug("Getting node with key {}", key);
+
+        Node node = findNode(key, rootNode);
+
+        if (node != null)
+        {
+            return node;
+        }
+
+        return null;
+    }
+
     private Node getLeftmostNode(Node nodeFrom)
     {
         if (nodeFrom.getLeftChild() == null)
@@ -100,6 +122,65 @@ public class TreeMap<K extends Comparable<K>, V>
         leftmostNode.setLeftChild(nodeToRemove.getLeftChild());
 
         return nodeToRemove.getValue();
+    }
+
+    private void addChildNodesToSet(Node parentNode, Set<Node> nodes)
+    {
+        if (parentNode.getLeftChild() != null)
+        {
+            nodes.add(parentNode.getLeftChild());
+            addChildNodesToSet(parentNode.getLeftChild(), nodes);
+        }
+
+        if (parentNode.getRightChild() != null)
+        {
+            nodes.add(parentNode.getRightChild());
+            addChildNodesToSet(parentNode.getRightChild(), nodes);
+        }
+    }
+
+    public Set<Node> getNodes()
+    {
+        Set<Node> nodes = new HashSet<>();
+
+        nodes.add(rootNode);
+        addChildNodesToSet(rootNode, nodes);
+
+        return nodes;
+    }
+
+    private void addChildNodesKeysToSetByValue(Node parentNode, Set<K> keys, V value)
+    {
+        if (parentNode.getLeftChild() != null)
+        {
+            if (parentNode.getLeftChild().getValue().equals(value))
+            {
+                keys.add(parentNode.getLeftChild().getKey());
+            }
+            addChildNodesKeysToSetByValue(parentNode.getLeftChild(), keys, value);
+        }
+
+        if (parentNode.getRightChild() != null)
+        {
+            if (parentNode.getRightChild().getValue().equals(value))
+            {
+                keys.add(parentNode.getRightChild().getKey());
+            }
+            addChildNodesKeysToSetByValue(parentNode.getRightChild(), keys, value);
+        }
+    }
+
+    public Set<K> contains(V value)
+    {
+        Set<K> keys = new HashSet<>();
+
+        if (rootNode.getValue().equals(value))
+        {
+            keys.add(rootNode.getKey());
+        }
+        addChildNodesKeysToSetByValue(rootNode, keys, value);
+
+        return keys;
     }
 
     private class Node implements Comparable<Node>

@@ -23,13 +23,13 @@ public class Main
         treeMap.add(3, "Bofur");
         treeMap.add(23, "Bombur");
 
-        System.out.println(treeMap.find(4));
-        System.out.println(treeMap.find(101));
+        treeMap.add(24, "John");
+        treeMap.add(1, "John");
+        treeMap.add(13, "John");
+        treeMap.add(16, "John");
+        treeMap.add(20, "John");
 
-        System.out.println(treeMap.get(9));
-        System.out.println(treeMap.get(909));
-
-        System.out.println(treeMap.remove(5));
-        System.out.println(treeMap.find(5));
+        System.out.println(treeMap.getNodes());
+        System.out.println(treeMap.contains("John"));
     }
 }
